@@ -65,7 +65,14 @@ print(result)  # Output: Hello Alice, you are 25 years old.
 
 You can specify default values for parameters. If the caller does not provide a value for that parameter, the default value is used.
 
-- Example: `def greet(name="Guest"):` – If no name is passed, "Guest" will be used.
+```python
+def greet(name="Guest"):
+    return f"Hello {name}"
+
+# Function calls
+print(greet())  # Output: Hello Guest
+print(greet("Bob"))  # Output: Hello Bob
+```
 
 ### 4. **Variable-Length Arguments**
 
@@ -73,6 +80,14 @@ Functions can accept a variable number of arguments using `*args` (for positiona
 
 - `*args`: Accepts a variable number of positional arguments.
 - `**kwargs`: Accepts a variable number of keyword arguments.
+```python
+def greet_multiple(*names):
+    return ", ".join(names)
+
+# Function call with variable-length arguments
+result = greet_multiple("Alice", "Bob", "Charlie")
+print(result)  # Output: Alice, Bob, Charlie
+```
 
 ---
 
